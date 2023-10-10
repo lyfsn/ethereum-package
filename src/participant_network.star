@@ -408,5 +408,6 @@ padding = int(sys.argv[1])
 print(int(time.time()+padding), end="")
 """,
         args=[str(padding)],
+        image = "python:3.12"
     )
     return result.output
