@@ -1,1 +1,1 @@
-kurtosis enclave rm -f devnet
+kurtosis enclave stop devnet
