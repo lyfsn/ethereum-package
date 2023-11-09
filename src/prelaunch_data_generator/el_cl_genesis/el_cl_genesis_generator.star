@@ -53,10 +53,20 @@ def generate_el_cl_genesis_data(
         genesis_values_and_dest_filepath, "genesis-el-cl-env-file"
     )
 
+    el_genesis_config = plan.upload_files(
+        src="../../../el-genesis-config.yaml", 
+        name="el-genesis-config.yaml"
+    )
+    files_mapping = {
+        GENESIS_VALUES_PATH: genesis_generation_config_artifact_name,
+        GENESIS_VALUES_PATH + "/el": el_genesis_config,
+    }
+
     genesis = plan.run_sh(
-        run="cp /opt/values.env /config/values.env && ./entrypoint.sh all",
+        run="export https_proxy=http://host.docker.internal:7890 http_proxy=http://host.docker.internal:7890 all_proxy=socks5://host.docker.internal:7890 && cp /opt/values.env /config/values.env && cp /opt/el/el-genesis-config.yaml /config/el/genesis-config.yaml && ./entrypoint.sh all",
         image=image,
-        files={GENESIS_VALUES_PATH: genesis_generation_config_artifact_name},
+        # files={GENESIS_VALUES_PATH: genesis_generation_config_artifact_name},
+        files=files_mapping,
         store=[StoreSpec(src="/data", name="el-cl-genesis-data")],
         wait=None,
     )

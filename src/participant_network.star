@@ -97,7 +97,9 @@ def launch_participant_network(
         and network_params.electra_fork_epoch == None
     ):
         ethereum_genesis_generator_image = (
-            "ethpandaops/ethereum-genesis-generator:2.0.4"
+            # "ethpandaops/ethereum-genesis-generator:2.0.4"
+            "wangyufsn/ethereum-genesis-generator:2.0.4"
+            # "wangyufsn/ethereum-genesis-generator:master"
         )
     # we are running electra - experimental
     elif network_params.electra_fork_epoch != None:
