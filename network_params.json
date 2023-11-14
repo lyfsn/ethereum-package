@@ -2,9 +2,9 @@
   "participants": [
     {
       "el_client_type": "geth",
-      "el_client_image": "ethereum/client-go:latest",
+      "el_client_image": "",
       "cl_client_type": "lighthouse",
-      "cl_client_image": "sigp/lighthouse:latest",
+      "cl_client_image": "",
       "count": 1
     }
   ],

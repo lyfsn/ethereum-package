@@ -89,3 +89,4 @@ yarn-error.log
 dump/
 
 allocs.json
+validator-keys

@@ -1,1 +1,0 @@
-kurtosis enclave stop devnet
