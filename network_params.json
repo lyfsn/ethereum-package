@@ -5,20 +5,33 @@
       "el_client_image": "",
       "cl_client_type": "lighthouse",
       "cl_client_image": "",
-      "count": 2
-    }
+      "count": 1
+    },
+    {
+      "el_client_type": "geth",
+      "el_client_image": "",
+      "cl_client_type": "prysm",
+      "cl_client_image": "",
+      "count": 1
+    },
   ],
   "network_params": {
     "network_id": "28256",
     "deposit_contract_address": "0x4242424242424242424242424242424242424242",
     "seconds_per_slot": 12,
-    "slots_per_epoch": 32,
     "num_validator_keys_per_node": 64,
     "preregistered_validator_keys_mnemonic": "giant issue aisle success illegal bike spike question tent bar rely arctic volcano long crawl hungry vocal artwork sniff fantasy very lucky have athlete",
-    "deneb_for_epoch": 0,
-    "genesis_delay": 240
+    "genesis_delay": 120,
+    "max_churn": 8,
+    "ejection_balance": 16000000000,
+    "capella_fork_epoch": 0,
+    "deneb_for_epoch": 4,
+    "electra_fork_epoch": null
   },
-  "verifications_epoch_limit": 5,
-  "global_client_log_level": "debug",
-  "additional_services": []
+  "additional_services": [
+    "el_forkmon",
+    "dora"
+  ],
+  "global_client_log_level": "info",
+  "snooper_enabled": false
 }
