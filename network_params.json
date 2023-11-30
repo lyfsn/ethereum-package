@@ -6,14 +6,7 @@
       "cl_client_type": "lighthouse",
       "cl_client_image": "",
       "count": 1
-    },
-    {
-      "el_client_type": "geth",
-      "el_client_image": "",
-      "cl_client_type": "prysm",
-      "cl_client_image": "",
-      "count": 1
-    },
+    }
   ],
   "network_params": {
     "network_id": "28256",
@@ -25,7 +18,7 @@
     "max_churn": 8,
     "ejection_balance": 16000000000,
     "capella_fork_epoch": 0,
-    "deneb_for_epoch": 4,
+    "deneb_fork_epoch": 1,
     "electra_fork_epoch": null
   },
   "additional_services": [

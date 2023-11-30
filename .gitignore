@@ -93,3 +93,4 @@ validator-keys
 el-cl-genesis-data
 prysm-password
 *.tar.gz
+*-env-file
