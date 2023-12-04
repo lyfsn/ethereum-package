@@ -87,3 +87,10 @@ yarn-error.log
 
 # enclave dumps
 dump/
+
+allocs.json
+validator-keys
+el-cl-genesis-data
+prysm-password
+*.tar.gz
+*-env-file
