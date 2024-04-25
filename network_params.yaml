@@ -60,7 +60,7 @@ additional_services:
 tx_spammer_params:
   tx_spammer_extra_args: [
     "--accounts=100",
-    "--txcount=10",
+    "--txcount=100",
     "--gaslimit=10_000_000",
   ]
 goomy_blob_params:
