@@ -28,7 +28,6 @@ participants:
     count: 1
   - el_type: erigon
     el_extra_params: [ 
-      "--nodiscover=false",
       "--ethstats=Erigon:pwd@95.217.233.186:3000" 
     ]
     cl_type: lighthouse
@@ -62,7 +61,7 @@ tx_spammer_params:
   tx_spammer_extra_args: [
     "--accounts=100",
     "--txcount=10",
-    "--gaslimit=1_000_000",
+    "--gaslimit=10_000_000",
   ]
 goomy_blob_params:
   goomy_blob_args: []
