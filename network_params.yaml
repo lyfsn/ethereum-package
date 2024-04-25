@@ -1,13 +1,24 @@
 participants:
   - el_type: geth
+    el_extra_params: [ 
+      "--http.port=8545",
+      "--ethstats=Geth:pwd@host.docker.internal:3000"
+    ]
     cl_type: lighthouse
     vc_type: lighthouse
     count: 1
   - el_type: nethermind
+    el_extra_params: [
+      "--EthStats.Enabled=true",
+      "--EthStats.Name=Nethermind",
+      "--EthStats.Secret=pwd",
+      "--EthStats.Server=ws://host.docker.internal:3000/api",
+    ]
     cl_type: lighthouse
     vc_type: lighthouse
     count: 1
   - el_type: besu
+    el_extra_params: [ "--ethstats=Besu:pwd@host.docker.internal:3000" ]
     cl_type: lighthouse
     vc_type: lighthouse
     count: 1
@@ -16,7 +27,8 @@ participants:
     vc_type: lighthouse
     count: 1
   - el_type: erigon
-    el_image: thorax/erigon:v2.59.0
+    el_extra_params: [ "--ethstats=Erigon:pwd@host.docker.internal:3000" ]
+    el_image: thorax/erigon:v2.59.3
     cl_type: lighthouse
     vc_type: lighthouse
     count: 1
