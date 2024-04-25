@@ -27,7 +27,10 @@ participants:
     vc_type: lighthouse
     count: 1
   - el_type: erigon
-    el_extra_params: [ "--ethstats=Erigon:pwd@95.217.233.186:3000" ]
+    el_extra_params: [ 
+      "--nodiscover=false",
+      "--ethstats=Erigon:pwd@95.217.233.186:3000" 
+    ]
     cl_type: lighthouse
     vc_type: lighthouse
     count: 1
