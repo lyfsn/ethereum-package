@@ -6,7 +6,15 @@ participants:
     ]
     cl_type: lighthouse
     vc_type: lighthouse
-    count: 2
+    count: 1
+  - el_type: geth
+    el_extra_params: [ 
+      "--http.port=8545",
+      "--ethstats=Geth-2:pwd@95.217.233.186:3000"
+    ]
+    cl_type: lighthouse
+    vc_type: lighthouse
+    count: 1
   - el_type: nethermind
     el_extra_params: [
       "--EthStats.Enabled=true",
@@ -16,7 +24,31 @@ participants:
     ]
     cl_type: lighthouse
     vc_type: lighthouse
-    count: 2
+    count: 1
+  - el_type: nethermind
+    el_extra_params: [
+      "--EthStats.Enabled=true",
+      "--EthStats.Name=Nethermind-2",
+      "--EthStats.Secret=pwd",
+      "--EthStats.Server=ws://95.217.233.186:3000/api",
+    ]
+    cl_type: lighthouse
+    vc_type: lighthouse
+    count: 1
+  - el_type: erigon
+    el_extra_params: [ 
+      "--ethstats=Erigon:pwd@95.217.233.186:3000" 
+    ]
+    cl_type: lighthouse
+    vc_type: lighthouse
+    count: 1
+  - el_type: erigon
+    el_extra_params: [ 
+      "--ethstats=Erigon-2:pwd@95.217.233.186:3000" 
+    ]
+    cl_type: lighthouse
+    vc_type: lighthouse
+    count: 1
   # - el_type: besu
   #   el_extra_params: [ "--ethstats=Besu:pwd@95.217.233.186:3000" ]
   #   cl_type: lighthouse
@@ -26,13 +58,6 @@ participants:
   #   cl_type: lighthouse
   #   vc_type: lighthouse
   #   count: 1
-  - el_type: erigon
-    el_extra_params: [ 
-      "--ethstats=Erigon:pwd@95.217.233.186:3000" 
-    ]
-    cl_type: lighthouse
-    vc_type: lighthouse
-    count: 2
 network_params:
   network: kurtosis
   network_id: "3151908"
