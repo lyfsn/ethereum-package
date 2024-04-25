@@ -6,7 +6,7 @@ participants:
     ]
     cl_type: lighthouse
     vc_type: lighthouse
-    count: 1
+    count: 2
   - el_type: nethermind
     el_extra_params: [
       "--EthStats.Enabled=true",
@@ -16,22 +16,21 @@ participants:
     ]
     cl_type: lighthouse
     vc_type: lighthouse
-    count: 1
+    count: 2
   - el_type: besu
     el_extra_params: [ "--ethstats=Besu:pwd@host.docker.internal:3000" ]
     cl_type: lighthouse
     vc_type: lighthouse
-    count: 1
+    count: 2
   - el_type: reth
     cl_type: lighthouse
     vc_type: lighthouse
-    count: 1
+    count: 2
   - el_type: erigon
     el_extra_params: [ "--ethstats=Erigon:pwd@host.docker.internal:3000" ]
-    el_image: thorax/erigon:v2.59.3
     cl_type: lighthouse
     vc_type: lighthouse
-    count: 1
+    count: 2
 network_params:
   network: kurtosis
   network_id: "3151908"
