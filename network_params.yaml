@@ -28,7 +28,6 @@ participants:
     count: 1
   - el_type: erigon
     el_extra_params: [ 
-      "--chain=awsome",
       "--nodiscover=false",
       "--ethstats=Erigon:pwd@95.217.233.186:3000" 
     ]
