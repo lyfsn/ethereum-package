@@ -7,35 +7,18 @@ participants:
     cl_type: lighthouse
     vc_type: lighthouse
     count: 1
-  - el_type: nethermind
-    el_extra_params: [
-      "--EthStats.Enabled=true",
-      "--EthStats.Name=Nethermind",
-      "--EthStats.Secret=pwd",
-      "--EthStats.Server=ws://host.docker.internal:3000/api",
-    ]
-    cl_type: lighthouse
-    vc_type: lighthouse
-    count: 1
-  - el_type: besu
-    el_extra_params: [ "--ethstats=Besu:pwd@host.docker.internal:3000" ]
-    cl_type: lighthouse
-    vc_type: lighthouse
-    count: 1
-  - el_type: reth
-    cl_type: lighthouse
-    vc_type: lighthouse
-    count: 1
   - el_type: erigon
+    el_image: erigon-devnet
     el_extra_params: [ 
-      "--ethstats=Erigon:pwd@host.docker.internal:3000" 
+      "--ethstats=Erigon:pwd@host.docker.internal:3000",
+      "--txpool.accountslots=10000"
     ]
     cl_type: lighthouse
     vc_type: lighthouse
     count: 1
 network_params:
   network: kurtosis
-  network_id: "3151908"
+  network_id: "2342352352"
   deposit_contract_address: "0x4242424242424242424242424242424242424242"
   seconds_per_slot: 12
   num_validator_keys_per_node: 64
@@ -82,7 +65,7 @@ parallel_keystore_generation: false
 disable_peer_scoring: false
 grafana_additional_dashboards: []
 persistent: false
-mev_type: null
+mev_type: flashbots
 mev_params:
   mev_relay_image: flashbots/mev-boost-relay
   mev_builder_image: ethpandaops/flashbots-builder:main
