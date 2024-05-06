@@ -101,7 +101,8 @@ parallel_keystore_generation: false
 disable_peer_scoring: false
 grafana_additional_dashboards: []
 persistent: false
-mev_type: flashbots
+mev_type: null
+# mev_type: flashbots
 mev_params:
   mev_relay_image: flashbots/mev-boost-relay
   mev_builder_image: ethpandaops/flashbots-builder:main
