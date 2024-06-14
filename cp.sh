@@ -1,0 +1,1 @@
+docker cp $(docker ps -q -f "name=^el-1-nethermind-lighthouse"):/nethermind/logs/rpc.0.txt ./0.txt
