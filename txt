@@ -6,3 +6,8 @@ http://95.217.233.186:33086/
 http://95.217.233.186:33089/
 http://95.217.233.186:9988/
 
+
+
+https://rpc-kurtosis-devnet.archivenode.club/
+
+
