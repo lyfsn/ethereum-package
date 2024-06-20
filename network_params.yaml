@@ -85,7 +85,6 @@ network_params:
   additional_preloaded_contracts: {}
 additional_services:
   - dora
-  - blockscout
 dora_params:
   image: ""
 tx_spammer_params:
