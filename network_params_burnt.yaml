@@ -1,11 +1,14 @@
 participants:
 # EL
-  - el_type: geth
-    el_image: ethereum/client-go:latest
+  - el_type: nethermind
+    el_image: ""
     el_log_level: ""
     el_extra_env_vars: {}
     el_extra_labels: {}
-    el_extra_params: []
+    el_extra_params: [
+      --JsonRpc.RpcRecorderState=All,
+      --JsonRpc.GasCap=9223372036854775807
+    ]
     el_tolerations: []
     el_volume_size: 0
     el_min_cpu: 0
@@ -14,7 +17,7 @@ participants:
     el_max_mem: 0
 # CL
     cl_type: lighthouse
-    cl_image: sigp/lighthouse:latest-unstable
+    cl_image: ""
     cl_log_level: ""
     cl_extra_env_vars: {}
     cl_extra_labels: {}
@@ -28,9 +31,8 @@ participants:
     use_separate_vc: true
 # Validator
     vc_type: lighthouse
-    vc_image: sigp/lighthouse:latest-unstable
+    vc_image: ""
     vc_log_level: ""
-    vc_count: 1
     vc_extra_env_vars: {}
     vc_extra_labels: {}
     vc_extra_params: []
@@ -43,7 +45,7 @@ participants:
 # participant specific
     node_selectors: {}
     tolerations: []
-    count: 2
+    count: 1
     snooper_enabled: false
     ethereum_metrics_exporter_enabled: false
     xatu_sentry_enabled: false
@@ -54,9 +56,21 @@ participants:
     blobber_extra_params: []
     builder_network_params: null
     keymanager_enabled: false
+  # - el_type: nethermind
+  #   cl_type: prysm
+  #   vc_type: prysm
+  # - el_type: nethermind
+  #   cl_type: teku
+  #   vc_type: teku
+  # - el_type: nethermind
+  #   cl_type: nimbus
+  #   vc_type: nimbus
+  # - el_type: nethermind
+  #   cl_type: lodestar
+  #   vc_type: lodestar
 network_params:
-  network: trump
-  network_id: "64646464"
+  network: kurtosis
+  network_id: "3151908"
   deposit_contract_address: "0x4242424242424242424242424242424242424242"
   seconds_per_slot: 12
   num_validator_keys_per_node: 64
@@ -66,28 +80,23 @@ network_params:
     very lucky have athlete"
   preregistered_validator_count: 0
   genesis_delay: 20
-  max_per_epoch_activation_churn_limit: 8
-  churn_limit_quotient: 65536
+  max_churn: 8
   ejection_balance: 16000000000
   eth1_follow_distance: 2048
   min_validator_withdrawability_delay: 256
   shard_committee_period: 256
   deneb_fork_epoch: 0
-  electra_fork_epoch: 100000000
-  eip7594_fork_epoch: 100000001
+  electra_fork_epoch: 500
+  eip7594_fork_epoch: 1000
   eip7594_fork_version: "0x70000038"
-  network_sync_base_url: https://ethpandaops-ethereum-node-snapshots.ams3.cdn.digitaloceanspaces.com/
-  data_column_sidecar_subnet_count: 32
-  samples_per_slot: 8
-  custody_requirement: 1
-  target_number_of_peers: 70
-  additional_preloaded_contracts: {}
+  network_sync_base_url: https://ethpandaops-ethereum-node-snapshots.ams3.digitaloceanspaces.com/
 additional_services:
-  - el_forkmon
+  - tx_spammer
+  # - blob_spammer
+  # - el_forkmon
+  # - beacon_metrics_gazer
   - dora
-  - blockscout
-dora_params:
-  image: ""
+  # - prometheus_grafana
 tx_spammer_params:
   tx_spammer_extra_args: []
 goomy_blob_params:
@@ -143,7 +152,6 @@ xatu_sentry_params:
     - voluntary_exit
     - contribution_and_proof
     - blob_sidecar
-apache_port: 40000
 global_tolerations: []
 global_node_selectors: {}
 keymanager_enabled: false
