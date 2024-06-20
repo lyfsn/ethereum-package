@@ -55,7 +55,7 @@ participants:
     builder_network_params: null
     keymanager_enabled: false
 network_params:
-  network: trump
+  network: kurtosis
   network_id: "64646464"
   deposit_contract_address: "0x4242424242424242424242424242424242424242"
   seconds_per_slot: 12
