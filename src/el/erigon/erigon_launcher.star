@@ -218,7 +218,7 @@ def get_config(
         "--log.console.verbosity=" + verbosity_level,
         "--datadir=" + EXECUTION_DATA_DIRPATH_ON_CLIENT_CONTAINER,
         "--port={0}".format(discovery_port),
-        "--http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin",
+        "--http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin,ots",
         "--http.vhosts=*",
         "--ws",
         "--allow-insecure-unlock",

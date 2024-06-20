@@ -1,19 +1,3 @@
-UUID           Name                                             Ports                                         Status
-86d80c0cc8b2   cl-1-lighthouse-erigon                           http: 4000/tcp -> http://127.0.0.1:33066      RUNNING
-                                                                metrics: 5054/tcp -> http://127.0.0.1:33065   
-                                                                tcp-discovery: 9000/tcp -> 127.0.0.1:33064    
-                                                                udp-discovery: 9000/udp -> 127.0.0.1:32815    
-8729b31fd7ee   dora                                             http: 8080/tcp -> http://127.0.0.1:33068      RUNNING
-7e928c8f7332   el-1-erigon-lighthouse                           engine-rpc: 8551/tcp -> 127.0.0.1:33062       RUNNING
-                                                                metrics: 9001/tcp -> 127.0.0.1:33061          
-                                                                tcp-discovery: 30303/tcp -> 127.0.0.1:33060   
-                                                                udp-discovery: 30303/udp -> 127.0.0.1:32814   
-                                                                ws-rpc: 8545/tcp -> http://127.0.0.1:33063    
-56d6605b692c   validator-key-generation-cl-validator-keystore   <none>                                        RUNNING
-2228fa702174   vc-1-erigon-lighthouse                           metrics: 8080/tcp -> http://127.0.0.1:33067   RUNNING
-
-
-
 
 
 
@@ -21,3 +5,4 @@ http://95.217.233.186:33068/
 http://95.217.233.186:33063/
 http://95.217.233.186:33066/
 http://95.217.233.186:9988/
+
