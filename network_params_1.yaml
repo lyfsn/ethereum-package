@@ -1,8 +1,8 @@
 participants:
-  - el_type: geth
-    cl_type: lighthouse
-    vc_type: lighthouse
-    count: 1
+  # - el_type: geth
+  #   cl_type: lighthouse
+  #   vc_type: lighthouse
+  #   count: 1
 # EL
   - el_type: erigon
     # el_image: ethereum/client-go:latest

@@ -1,32 +1,16 @@
 
 
 
-UUID           Name                                             Ports                                         Status
-f0ba00734a11   cl-1-lighthouse-geth                             http: 4000/tcp -> http://127.0.0.1:33105      RUNNING
-                                                                metrics: 5054/tcp -> http://127.0.0.1:33104   
-                                                                tcp-discovery: 9000/tcp -> 127.0.0.1:33103    
-                                                                udp-discovery: 9000/udp -> 127.0.0.1:32822    
-5c3ed9c35d17   cl-2-lighthouse-erigon                           http: 4000/tcp -> http://127.0.0.1:33108      RUNNING
-                                                                metrics: 5054/tcp -> http://127.0.0.1:33107   
-                                                                tcp-discovery: 9000/tcp -> 127.0.0.1:33106    
-                                                                udp-discovery: 9000/udp -> 127.0.0.1:32823    
-6365fc769fb5   dora                                             http: 8080/tcp -> http://127.0.0.1:33111      RUNNING
-ae6334ed5df2   el-1-geth-lighthouse                             engine-rpc: 8551/tcp -> 127.0.0.1:33096       RUNNING
-                                                                metrics: 9001/tcp -> 127.0.0.1:33095          
-                                                                rpc: 8545/tcp -> http://127.0.0.1:33098       
-                                                                tcp-discovery: 30303/tcp -> 127.0.0.1:33094   
-                                                                udp-discovery: 30303/udp -> 127.0.0.1:32820   
-                                                                ws: 8546/tcp -> 127.0.0.1:33097               
-1ca5c65c3b2c   el-2-erigon-lighthouse                           engine-rpc: 8551/tcp -> 127.0.0.1:33101       RUNNING
-                                                                metrics: 9001/tcp -> 127.0.0.1:33100          
-                                                                tcp-discovery: 30303/tcp -> 127.0.0.1:33099   
-                                                                udp-discovery: 30303/udp -> 127.0.0.1:32821   
-                                                                ws-rpc: 8545/tcp -> http://127.0.0.1:33102    
-3b2eb91a5d8a   validator-key-generation-cl-validator-keystore   <none>                                        RUNNING
-f27d6a670b6e   vc-1-geth-lighthouse                             metrics: 8080/tcp -> http://127.0.0.1:33109   RUNNING
-2c3ce5fb011e   vc-2-erigon-lighthouse                           metrics: 8080/tcp -> http://127.0.0.1:33110   RUNNING
 
 
-https://rpc-kurtosis-devnet.archivenode.club/
+95.217.233.186:33098
+95.217.233.186:33102
+
+
+
+
+37.27.12.92:
+37.27.12.92:
+
 
 
